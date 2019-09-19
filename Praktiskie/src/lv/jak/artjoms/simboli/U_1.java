@@ -50,7 +50,7 @@ public class U_1 {
 		+text.replace("a","o"));
 		System.out.println();
 		System.out.println("8.Noņemt komatus un punktus");
-		System.out.println(text.replace(".",""));
+		System.out.println(text.replace(".",""+",",""));
 	}
 
 }
