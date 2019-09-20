@@ -50,7 +50,69 @@ public class U_1 {
 		+text.replace("a","o"));
 		System.out.println();
 		System.out.println("8.Noņemt komatus un punktus");
-		System.out.println(text.replace(".",""+",",""));
+		System.out.println(text.replace(",","").replace(".",""));
+		System.out.println();
+		System.out.println("9.Noteikt apakšvirknes tekstu,"
+				+ " ja apakšvirknes 1. simbola indekss ir 13, "
+				+ "bet pēdējais apakšvirknes simbols ir teksta 42. simbols tekstā. ");
+		System.out.println(text.substring(13, 43));
+		System.out.println();
+		System.out.println("10. Sadalīt simbolu virkni pa vārdiem");
+		System.out.println(text.split(text));
+		System.out.println();
+		System.out.println("11.Atrast garāko vārdu. "
+				+ "Ja vairākiem vārdiem vienāds garums, izvadīt tos visus ");
+		String text11 = text.replace(",", "");
+		text11 = text.replace(".", "");
+		
+		String[] vardi11 = text.split("");
+		String garakais="";
+		String visiGarakie="";
+		 
+		for(String vards : vardi11) {
+			 if(vards.length()>garakais.length()) {
+				 garakais = vards;
+				 visiGarakie = vards;
+			 }
+			 else if(vards.length()==garakais.length()) {
+				 visiGarakie += ( ","+vards);
+			 }
+			 
+		 }
+		System.out.println("Visi garakie vardi ir"+visiGarakie);
+	System.out.println();
+	System.out.println("12.Atrast īsāko vārdu. "
+			+ "Ja vairākiem vārdiem vienāds garums, "
+			+ "izvadīt tos visus. ");
+	String text12 = text.replace(",", "");
+	text12 = text.replace(".", "");
+	
+	String[] vardi12 = text.split("");
+	String isais=vardi12[0];
+	String visiIsie=vardi12[0];
+	 
+	for(String vards1 : vardi12) {
+		 if(vards1.length()<isais.length()) {
+			isais = vards1;
+			 visiIsie = vards1;
+		 }
+		 else if(vards1.length()==isais.length()) {
+			 visiIsie += ( ","+vards1);
+		 }
+		 
+	 }
+	System.out.println("Visi isakie vardi ir"+visiIsie);
+	System.out.println();
+	System.out.println("13.Noteikt, kuri vārdi sākas ar burtu „K” – "
+			+ "ignorēt lielo burtu rakstību. "
+			+ "Izvadīt visus tos vārdus. ");
+	
+	
+	
+	
+	
+	
 	}
+	
 
 }
