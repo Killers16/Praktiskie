@@ -11,7 +11,7 @@ public class U_4 {
 		
 				
 		sum=x+x;
-		sum=sum%;
+		sum=sum;
 		
 		
 		
