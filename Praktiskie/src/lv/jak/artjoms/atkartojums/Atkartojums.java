@@ -1,12 +1,12 @@
 package lv.jak.artjoms.atkartojums;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Atkartojums {
 
 	public static void main(String[] args) {
 		//1. Izveodot vienu mainigo katram datu tipam
-		 
+		/* 
 		int a;	//vesels skaitlis	
 		byte a7;//vesels skaitlis
 		long a6;//vesels skaitlis	
@@ -20,10 +20,10 @@ public class Atkartojums {
 		
 		Boolean a8;//loģiskie (true vai false)
 		
-		
+			
 		//2.Izveidot datu ievades objektu
 		Scanner input = new Scanner(System.in);
-		
+	
 		//3.Ivadīt pieprasijumu par vertību ievadīšanu
 		//šadiem datu tipiem-int, long, float, double, String
 		//un inicializēt iepriekš izveidot mainīgos.
@@ -49,19 +49,19 @@ public class Atkartojums {
 		 	//5.Uzraksti programmu kode , kas pieprasa ievadīt decimalu skaitli
 		 	//tik ilgi ,kamer ievadīs
 		
-		do {
+		/*do {
 			System.out.print("ievadi decimalskaitli:");
 			a2 = input.nextDouble();	
 		}
 	while(a2!=0);
-		
+		*/
 			
 		
 		
 		
 			
 		
-		
+	
 	}
 	
 }

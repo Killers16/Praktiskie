@@ -1,6 +1,6 @@
 package CikliskasProgramas_ar_metodi;
 
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class U_4 {
 
@@ -44,4 +44,4 @@ return sum;
 	
 	}
 	
-}
+}*/

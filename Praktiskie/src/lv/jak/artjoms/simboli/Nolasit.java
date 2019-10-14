@@ -23,7 +23,7 @@ public class Nolasit {
 			//fw 	= new FileWriter(file,true);
 			
 		fw 	= new FileWriter(file,true);
-		fw.write();
+		fw.write("");
 		String text = "";
 		fw.write(text+"\n");
 		fw.flush();

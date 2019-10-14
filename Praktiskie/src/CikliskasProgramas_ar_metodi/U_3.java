@@ -1,7 +1,8 @@
 package CikliskasProgramas_ar_metodi;
 
-import java.util.Scanner;
 
+/*
+ import java.util.Scanner;
 public class U_3 {
 
 		public static int summa(int c ){
@@ -14,6 +15,7 @@ public class U_3 {
 				z=x;
 					
 			return c;					
+			
 			}
 return z;
 
@@ -22,7 +24,7 @@ return z;
 		
 		
 			
-		 
+	 
 
 		public static void main(String[] args) {
 				
@@ -36,6 +38,6 @@ return z;
 		}
 		
 
-	}
+	}*/
 
 

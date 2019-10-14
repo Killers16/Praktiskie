@@ -20,7 +20,7 @@ public class MainClass {
 		
 		//3.Audzekņa objekta izveide
 		 Audzeknis  Audzeknis = new  Audzeknis();
-		 Audzeknis.Vards = "Artjoms";
+		 Audzeknis.vards = "Artjoms";
 		 Audzeknis.Uzvards = "Lukašovs";
 		 Audzeknis.Vecums = 17;
 		 Audzeknis.kurss = Kurss;
@@ -30,7 +30,7 @@ public class MainClass {
 		 
 		
 		System.out.println("Audzekņa dati"); 
-		System.out.println("Vards:"+Audzeknis.Vards);
+		System.out.println("Vards:"+Audzeknis.vards);
 		System.out.println("Uzvards:"+Audzeknis.Uzvards);
 		System.out.println("Vecums:"+Audzeknis.Vecums);
 		System.out.println("Kurss:"+Audzeknis.kurss.KursaNosaukums);

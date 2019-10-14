@@ -5,7 +5,7 @@ public class MainClass {
 	public static void main(String[] args) {
 			
 		Gramata Gramata = new Gramata();
-		Gramata.Autors = Autors;
+		Gramata.Autors = "Autors";
 		Gramata.GramatasNousaukums = "Balta Nave";
 		Gramata.Zanrs = "Kriminalromans"; 
 		Gramata.Izdevnieciba = "Zvaigzne abc";
