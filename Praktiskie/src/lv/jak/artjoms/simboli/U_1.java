@@ -98,6 +98,7 @@ public class U_1 {
 			+ text.substring (text.lastIndexOf (' '), text.length()));
 	
 	System.out.println();
+	
 	System.out.println("13.Noteikt, kuri vārdi sākas ar burtu "
 			+ "„K” – ignorēt lielo burtu rakstību. "
 			+ "Izvadīt visus tos vārdus.");
