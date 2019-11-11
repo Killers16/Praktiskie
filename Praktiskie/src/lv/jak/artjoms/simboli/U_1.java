@@ -94,9 +94,9 @@ public class U_1 {
 	System.out.println("12.Atrast īsāko vārdu. "
 			+ "Ja vairākiem vārdiem vienāds garums, "
 			+ "izvadīt tos visus. ");
-	System.out.println("pedejais vards ir : " 
+	/*System.out.println("pedejais vards ir : " 
 			+ text.substring (text.lastIndexOf (' '), text.length()));
-	
+	*/ //nepareiz
 	System.out.println();
 	
 	System.out.println("13.Noteikt, kuri vārdi sākas ar burtu "
