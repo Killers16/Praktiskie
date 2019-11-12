@@ -1,6 +1,6 @@
 package lv.jak.lukasovs.forma;
 
-import java.awt.Font;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,20 +12,21 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import lv.jak.lukasovs.forma.IerakstisanaFaila;
+
 
 public class FormaElektriba extends JFrame {
 	
-	JLabel VardsL,UzvardsL,EpastsL,RekinaNrL,TalrunisL,PatēretājsL,ApekinsL,KilovataL;
+	JLabel VardsL,UzvardsL,EpastsL,RekinaNrL,TalrunisL,PatēretājsL,ApekinsL,KilovataL,SummaL;
 	
 	JList<String>listedNAmes;
-	JTextField VardsTF,UzvardsTF,EpastsTF,RekinaNrTF,TalrunisTF,PatēretājsTF;
+	JTextField VardsTF,UzvardsTF,EpastsTF,RekinaNrTF,TalrunisTF,PatēretājsTF,SummaTF;
 	JButton AcceptBTN;
 	JPanel panel;
 	
 	DefaultListModel<String> availableModel = new DefaultListModel<String>();
 	DefaultListModel<String> selectedModel = new DefaultListModel<String>();
 	
-	DefaultListModel<String>model = new DefaultListModel<String>();
 	
 	public FormaElektriba() {
 		setBounds(600, 150, 300, 400);
@@ -36,6 +37,10 @@ public class FormaElektriba extends JFrame {
 		init();
 		
 		setContentPane(panel);
+		
+	}
+	public void Summa(){
+		double sum = 0;
 		
 	}
 	
@@ -79,31 +84,76 @@ public class FormaElektriba extends JFrame {
 		PatēretājsTF = new JTextField();
 		PatēretājsTF.setBounds(100, 210, 160, 30);
 		
-		String s = null;
+		
 		ApekinsL = new JLabel("Apreķina dati: ");
 		ApekinsL.setBounds(10,250, 130, 30);
 		
+		SummaL = new JLabel("Summa: ");
+		SummaL.setBounds(43,270, 130, 30);
 		
+		SummaTF = new JTextField();
+		SummaTF.setBounds(100,270, 130, 30);
 		
-		KilovataL = new JLabel("1 kWh = 0.05029"); 
-		KilovataL.setBounds(120,280, 100, 30);
+		KilovataL = new JLabel("1 kWh = 0.05097"); 
+		KilovataL.setBounds(120,290, 100, 30);
 		
 		AcceptBTN = new JButton("Accept");
-		AcceptBTN.setBounds(100, 330, 100, 30);
-		
-		
-				
+		AcceptBTN.setBounds(100, 320, 100, 30);
+	
+		AcceptBTN.addActionListener(new ActionListener() {
 			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				availableModel.addElement(PatēretājsTF.getText());
+				PatēretājsTF.setText(" ");
+				 
+			}
+			
+	});
 		
 		panel.add(VardsL);panel.add(UzvardsL);panel.add(EpastsL);panel.add(RekinaNrL);panel.add(TalrunisL);
-		panel.add(PatēretājsL);panel.add(ApekinsL);panel.add(KilovataL);
+		panel.add(PatēretājsL);panel.add(ApekinsL);panel.add(KilovataL);panel.add(SummaL);
 		
 		panel.add(AcceptBTN);
 		
 		panel.add(VardsTF);panel.add(UzvardsTF);panel.add(EpastsTF);panel.add(RekinaNrTF);panel.add(TalrunisTF);
-		panel.add(PatēretājsTF);
+		panel.add(PatēretājsTF);panel.add(SummaTF);
+		
+		
+		
 	}
-
-
 	
+	public void actionPerformed(ActionEvent e){
+		
+		if(e.getSource() == AcceptBTN) {
+			String text = "First Name:"+ VardsTF.getText()
+			+"\nLast Name:"+ UzvardsTF.getText()
+			+"\nE-Mail"+ EpastsTF.getText()
+			+"\nReķina Nr:"+RekinaNrTF.getText()
+			+"\nTalrunis:"+TalrunisTF.getText()
+			+"\nkWh:"+PatēretājsTF.getText();
+			if(!selectedModel.isEmpty()) {
+				for(int i =0;i <selectedModel.getSize();i++) {
+					if(i<selectedModel.getSize()-1) {
+						text +=selectedModel.get(i)+", ";
+						text +=",";
+					}
+					
+				}
+			
+			}
+			else {
+				text +="-------";
+			}
+			text +="\n\n";
+			IerakstisanaFaila.writeToFile("Dati_No_Formas.txt",text);
+		}
+	else if(e.getSource()==AcceptBTN) {
+		System.exit(0);
+	}
+	
+		
+		}
+		
 }
+

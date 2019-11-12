@@ -1,4 +1,7 @@
-package lv.jak.artjoms.datnes;
+package lv.jak.lukasovs.forma;
+
+
+
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -7,8 +10,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class DatnesApstrade {
-	public void writeToFile(String fileName, String text) {
+public class IerakstisanaFaila {
+
+		
+	public static void writeToFile(String fileName, String text) {
 		File file = new File(fileName);
 		
 		FileWriter fw;
@@ -60,4 +65,5 @@ public class DatnesApstrade {
 
 	}
 
+		
 }
