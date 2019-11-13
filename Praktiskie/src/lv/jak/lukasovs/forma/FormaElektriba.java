@@ -11,8 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
 import lv.jak.lukasovs.forma.IerakstisanaFaila;
+
 
 
 public class FormaElektriba extends JFrame {
@@ -144,29 +144,25 @@ public class FormaElektriba extends JFrame {
 	
 		public void actionPerformed(ActionEvent e){
 			
+			
+			
 			if(e.getSource() == AcceptBTN) {
 			String text = "First Name:"+ VardsTF.getText()
 			+"\nLast Name:"+ UzvardsTF.getText()
 			+"\nE-Mail"+ EpastsTF.getText()
 			+"\nReķina Nr:"+RekinaNrTF.getText()
 			+"\nTalrunis:"+TalrunisTF.getText()
-			+"\nkWh:"+PatēretājsTF.getText();
-			if(!selectedModel.isEmpty()) {
-				for(int i =0;i <selectedModel.getSize();i++) {
-					if(i<selectedModel.getSize()-1) {
-						text +=selectedModel.get(i)+", ";
-						text +=",";
-					}
-					
-				}
+			+"\nkWh:"+PatēretājsTF.getText()
+			+"\nSumma :"+SummaTF.getText();
 			
-			}
-			else {
-				text +="-------";
-			}
-			text +="\n\n";
-			IerakstisanaFaila.writeToFile("Formas.txt",text);
+			IerakstisanaFaila.writeToFile("Formas.txt", text );
+			
+			FailaNolasisana.readFile("Formas.txt");
+	
+			
+			
 		}
+			
 	else if(e.getSource()==AcceptBTN) {
 		System.exit(0);
 	}
