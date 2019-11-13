@@ -6,10 +6,10 @@ public class MainClass {
 		FormaElektriba elektriba = new FormaElektriba();
 		elektriba.setVisible(true);
 		
+		IerakstisanaFaila.writeToFile("Formas.txt", " ");
 		
-		FailaNolasisana.readFile("Formas.txt");
-		IerakstisanaFaila.writeToFile("Formas.txt", "");
 		
+				
 	}
 
 }

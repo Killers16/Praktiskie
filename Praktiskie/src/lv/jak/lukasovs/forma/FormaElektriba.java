@@ -3,6 +3,8 @@ package lv.jak.lukasovs.forma;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -42,6 +44,7 @@ public class FormaElektriba extends JFrame {
 		setContentPane(panel);
 		
 	}
+	
 	
 		
 	    
@@ -90,8 +93,6 @@ public class FormaElektriba extends JFrame {
 		PatēretājsTF.setBounds(100, 210, 160, 30);
 		
 		
-		
-		
 		ApekinsL = new JLabel("Apreķina dati: ");
 		ApekinsL.setBounds(10,250, 130, 30);
 		
@@ -116,14 +117,33 @@ public class FormaElektriba extends JFrame {
 				 int a = Integer.parseInt(s2);
 				 double k = 0.05097;
 				 int s3 = 0;
-				 if(e.getSource()==AcceptBTN){  
-			            
-					double c = a*k;  
+				 
+				 NumberFormat nf = NumberFormat.getInstance(Locale.ENGLISH);
+				   nf.format(k);
+				      
+				
+				    if(e.getSource()==AcceptBTN){  
+					 double c = a*k;  
 					String result=String.valueOf(c);  
 					SummaTF.setText(result);  
+				 String text = "First Name:"+ VardsTF.getText()
+						+"\nLast Name:"+ UzvardsTF.getText()
+						+"\nE-Mail"+ EpastsTF.getText()
+						+"\nReķina Nr:"+RekinaNrTF.getText()
+						+"\nTalrunis:"+TalrunisTF.getText()
+						+"\nkWh:"+PatēretājsTF.getText()
+						+"\nSumma :"+SummaTF.getText();
+						
+						IerakstisanaFaila.writeToFile("Formas.txt", text );
+										 
 				 }
-				
+					 
+				 if(e.getSource()==AcceptBTN) {
+					System.exit(0);
 				}	
+				 
+		
+				} 
 	});
 		
 			
@@ -142,30 +162,7 @@ public class FormaElektriba extends JFrame {
 		
 	}
 	
-		public void actionPerformed(ActionEvent e){
-			
-			
-			
-			if(e.getSource() == AcceptBTN) {
-			String text = "First Name:"+ VardsTF.getText()
-			+"\nLast Name:"+ UzvardsTF.getText()
-			+"\nE-Mail"+ EpastsTF.getText()
-			+"\nReķina Nr:"+RekinaNrTF.getText()
-			+"\nTalrunis:"+TalrunisTF.getText()
-			+"\nkWh:"+PatēretājsTF.getText()
-			+"\nSumma :"+SummaTF.getText();
-			
-			IerakstisanaFaila.writeToFile("Formas.txt", text );
-			
-			
-		
-		}
-	else if(e.getSource()==AcceptBTN) {
-		System.exit(0);
-	}
 	
-		
-		}
 		
 		
 }

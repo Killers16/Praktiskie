@@ -16,7 +16,10 @@ import java.io.IOException;
 				
 				FileWriter fw ;
 				try {
-					if(!file.exists()) 
+					if(!file.exists()) {
+						
+						file = new File(fileName);
+					}
 					file.createNewFile();
 					
 					

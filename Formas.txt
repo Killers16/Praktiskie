@@ -1,5 +1,41 @@
-
-
-
-
-
+ 
+ 
+First Name:asd
+Last Name:asd
+E-Mailasd
+Reķina Nr:asd
+Talrunis:sdf
+kWh:850
+Summa :43.3245
+ 
+First Name:asd
+Last Name:asd
+E-Mailasd
+Reķina Nr:asd
+Talrunis:asd
+kWh:885
+Summa :45.10845
+ 
+First Name:asd
+Last Name:asd
+E-Mailasd
+Reķina Nr:asd
+Talrunis:asd
+kWh:850
+Summa :43.3245
+ 
+First Name:asd
+Last Name:asd
+E-Mailasd
+Reķina Nr:asd
+Talrunis:ad
+kWh:850
+Summa :43.3245
+ 
+First Name:ad
+Last Name:
+E-Mail
+Reķina Nr:
+Talrunis:
+kWh:250
+Summa :12.7425
