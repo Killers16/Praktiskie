@@ -157,12 +157,9 @@ public class FormaElektriba extends JFrame {
 			
 			IerakstisanaFaila.writeToFile("Formas.txt", text );
 			
-			FailaNolasisana.readFile("Formas.txt");
-	
 			
-			
+		
 		}
-			
 	else if(e.getSource()==AcceptBTN) {
 		System.exit(0);
 	}
