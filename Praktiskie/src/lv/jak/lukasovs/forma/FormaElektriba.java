@@ -27,8 +27,7 @@ public class FormaElektriba extends JFrame {
 	JButton AcceptBTN;
 	JPanel panel;
 	
-	DefaultListModel<String> availableModel = new DefaultListModel<String>();
-	DefaultListModel<String> selectedModel = new DefaultListModel<String>();
+	
 
 	
 	
@@ -117,9 +116,6 @@ public class FormaElektriba extends JFrame {
 				 int a = Integer.parseInt(s2);
 				 double k = 0.05097;
 				 int s3 = 0;
-				 
-				 NumberFormat nf = NumberFormat.getInstance(Locale.ENGLISH);
-				   nf.format(k);
 				      
 				
 				    if(e.getSource()==AcceptBTN){  
